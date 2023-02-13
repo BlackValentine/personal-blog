@@ -9,9 +9,9 @@ import SwiperCore, { Autoplay } from 'swiper';
 function CarouselSection(props) {
   SwiperCore.use([Autoplay]);
   const carouselList = [
-    { id: 1, image: bg1 },
-    { id: 2, image: bg2 },
-    { id: 3, image: bg3 },
+    { id: 1, image: bg1, type: "Livestype" },
+    { id: 2, image: bg2, type: "Technology" },
+    { id: 3, image: bg3, type: "Food" },
   ]
 
 
@@ -20,7 +20,7 @@ function CarouselSection(props) {
       className="mySwiper"
       loop={true}
       autoplay={{
-        delay: 2000,
+        delay: 5000,
         disableOnInteraction: false
       }}
       onSlideChange={() => console.log('slide change')}
@@ -29,7 +29,10 @@ function CarouselSection(props) {
       {carouselList.map(carouselItem => {
         return (
           <SwiperSlide key={carouselItem.id}>
-            <CarouselItem image={carouselItem.image} />
+            <CarouselItem 
+              image={carouselItem.image}
+              type={carouselItem.type}
+            />
           </SwiperSlide>
         )
       })}
