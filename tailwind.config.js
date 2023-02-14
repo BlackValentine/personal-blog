@@ -10,6 +10,8 @@ module.exports = {
       'ghost-white': '#F9F9FF',
       'spanish-gray': '#94979E',
       'eerie-black': '#1D1D1D',
+      'very-light-gray': '#eeeeee',
+      'black-russian': '#131315'
     },
     extend: {},
   },

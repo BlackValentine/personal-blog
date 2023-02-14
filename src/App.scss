@@ -1,0 +1,11 @@
+.button-transparent {
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+  transition: color 0.3s linear;
+  background-color: transparent;
+
+  &:hover {
+    color: #F67280;
+  }
+}

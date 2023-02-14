@@ -4,7 +4,7 @@ import './SvgLogo.scss';
 function SvgLogo(props) {
   return (
     <div>
-      <svg className="svg-animation" viewBox="0 0 200 100">
+      <svg className="svg-animation" viewBox="0 0 300 100">
         <symbol id="s-text">
           <text textAnchor="middle"
             x="50%"
