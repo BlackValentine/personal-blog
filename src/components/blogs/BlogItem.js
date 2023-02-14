@@ -1,16 +1,15 @@
 import React from 'react';
-import blog1 from '../../assets/images/blog1.jpg';
 import avatar2 from '../../assets/images/avatar2.jpg';
 
 function BlogItem(props) {
   return (
     <div className='relative bg-white p-7 rounded-2xl mb-20'>
       <div className="relative -mt-14 mb-6 overflow-hidden rounded-xl">
-        <img className='cursor-pointer hover:scale-110 transition-transform duration-300 ease-linear' src={blog1} alt="" />
+        <img className='cursor-pointer hover:scale-110 transition-transform duration-300 ease-linear' src={props.image} alt="" />
       </div>
       <div>
-        <span className='px-3 py-1.5 bg-pastel-red text-white font-bold text-sm rounded'>Fashion</span>
-        <h3 className='text-black font-bold mt-5 mb-2 text-2xl cursor-pointer hover:underline'>5 Effective Ways I’m Finding Focus in a Busy Season of Life</h3>
+        <span className='px-3 py-1.5 bg-pastel-red text-white font-bold text-sm rounded'>{props.type}</span>
+        <h3 className='text-black font-bold mt-5 mb-2 text-xl cursor-pointer hover:underline'>{props.title}</h3>
         <p className='text-spanish-gray text-base'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quam atque ipsa laborum sunt distinctio... </p>
         <div className="flex items-center mt-4">
           <img className='w-8 h-8 object-cover object-center rounded-full mr-3' src={avatar2} alt="" />

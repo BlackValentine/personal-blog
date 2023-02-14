@@ -6,7 +6,8 @@ import Header from './components/general/Header';
 import HomeScreen from './components/screens/HomeScreen';
 import { Route, Routes } from 'react-router-dom';
 import LoginScreen from './components/screens/LoginScreen';
-import RegisterForm from './components/users/RegisterForm';
+import AboutMeScreen from './components/screens/AboutMeScreen';
+import SignUpScreen from './components/screens/SignUpScreen';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/login" element={<LoginScreen />} />
-        <Route path="/register" element={<RegisterForm />} />
+        <Route path="/register" element={<SignUpScreen />} />
+        <Route path="/about" element={<AboutMeScreen />} />
       </Routes>
       <Footer />
     </div>

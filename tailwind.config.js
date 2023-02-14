@@ -11,7 +11,12 @@ module.exports = {
       'spanish-gray': '#94979E',
       'eerie-black': '#1D1D1D',
       'very-light-gray': '#eeeeee',
-      'black-russian': '#131315'
+      'black-russian': '#131315',
+      'muted-lavender': '#3b599b',
+      'royal-fuchsia': '#c32aa3',
+      'cherenkov-radiation': '#1dcaff',
+      'youtube-red': '#e52d27',
+      'strong-red': '#bd081c',
     },
     extend: {},
   },
