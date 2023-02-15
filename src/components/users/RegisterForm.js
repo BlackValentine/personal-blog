@@ -10,6 +10,7 @@ function RegisterForm(props) {
         <input className='w-full px-5 py-3 mb-5 rounded-xl border border-solid border-very-light-gray shadow bg-ghost-white text-sm text-black-russian' type="text" placeholder='UserName*' />
         <input className='w-full px-5 py-3 mb-5 rounded-xl border border-solid border-very-light-gray shadow bg-ghost-white text-sm text-black-russian' type="email" placeholder='Email Address*' />
         <input className='w-full px-5 py-3 mb-5 rounded-xl border border-solid border-very-light-gray shadow bg-ghost-white text-sm text-black-russian' type="password" placeholder='Password*' />
+        <input className='w-full px-5 py-3 mb-5 rounded-xl border border-solid border-very-light-gray shadow bg-ghost-white text-sm text-black-russian' type="text" placeholder='SecretKey*' />
         <div className="flex items-center">
           <div className="flex items-center">
             <input id='agree-term' type="checkbox" />

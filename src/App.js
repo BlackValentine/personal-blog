@@ -8,6 +8,7 @@ import { Route, Routes } from 'react-router-dom';
 import LoginScreen from './components/screens/LoginScreen';
 import AboutMeScreen from './components/screens/AboutMeScreen';
 import SignUpScreen from './components/screens/SignUpScreen';
+import NotFoundScreen from './components/screens/NotFoundScreen';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/login" element={<LoginScreen />} />
         <Route path="/register" element={<SignUpScreen />} />
         <Route path="/about" element={<AboutMeScreen />} />
+        <Route path="*" element={<NotFoundScreen />} />
       </Routes>
       <Footer />
     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import SvgLogo from './SvgLogo';
 
 function Header(props) {
@@ -7,16 +8,20 @@ function Header(props) {
   return (
     <div className="container grid grid-cols-3 m-auto">
       <SvgLogo />
-      <nav>
-        <ul className='flex items-center gap-4'>
-          <li className='font-bold'>About me</li>
-          <li className='font-bold'>Login</li>
-          <li className='font-bold'>Blogs</li>
-          <li className='font-bold'>404 Page</li>
+      <nav className='flex ml-10'>
+        <ul className='flex items-center gap-12 justify-evenly'>
+          <Link to={'/about'}>
+            <li className='font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear'>About me</li>
+          </Link>
+          <Link to={'/login'}>
+            <li className='font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear'>Login</li>
+          </Link>
+          <li className='font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear'>Blogs</li>
+          <li className='font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear'>404 Page</li>
         </ul>
       </nav>
 
-      <div className="flex items-center">
+      <div className="flex items-center justify-end">
         <div className="group mr-2">
           <div
             className="w-8 h-8 flex border border-solid border-light-gray rounded-full cursor-pointer group-hover:bg-pastel-red"
