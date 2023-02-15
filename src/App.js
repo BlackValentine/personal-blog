@@ -9,6 +9,7 @@ import LoginScreen from './components/screens/LoginScreen';
 import AboutMeScreen from './components/screens/AboutMeScreen';
 import SignUpScreen from './components/screens/SignUpScreen';
 import NotFoundScreen from './components/screens/NotFoundScreen';
+import NewBlogScreen from './components/screens/NewBlogScreen';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/login" element={<LoginScreen />} />
         <Route path="/register" element={<SignUpScreen />} />
         <Route path="/about" element={<AboutMeScreen />} />
+        <Route path="/blog/edit" element={<NewBlogScreen />} />
         <Route path="*" element={<NotFoundScreen />} />
       </Routes>
       <Footer />

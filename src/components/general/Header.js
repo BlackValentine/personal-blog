@@ -1,10 +1,13 @@
-import React from 'react';
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { setLightMode } from '../../features/generalSlice';
 import SvgLogo from './SvgLogo';
 
 function Header(props) {
-  const [lightMode, setLightMode] = useState(true)
+  const dispatch = useDispatch();
+  const lightMode = useSelector(state => state.general.lightMode)
+
   return (
     <div className="container grid grid-cols-3 m-auto">
       <SvgLogo />
@@ -25,7 +28,7 @@ function Header(props) {
         <div className="group mr-2">
           <div
             className="w-8 h-8 flex border border-solid border-light-gray rounded-full cursor-pointer group-hover:bg-pastel-red"
-            onClick={() => setLightMode(!lightMode)}
+            onClick={() => dispatch(setLightMode(!lightMode))}
           >
             {lightMode ? <i className="fas fa-sun m-auto group-hover:text-white"></i> : <i className="fas fa-moon m-auto group-hover:text-white"></i>}
           </div>
