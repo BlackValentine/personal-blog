@@ -3,7 +3,7 @@ import './SvgLogo.scss';
 
 function SvgLogo(props) {
   return (
-    <div>
+    <div className="cursor-pointer">
       <svg className="svg-animation" viewBox="0 0 300 100">
         <symbol id="s-text">
           <text textAnchor="middle"

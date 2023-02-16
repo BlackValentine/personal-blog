@@ -10,7 +10,9 @@ function Header(props) {
 
   return (
     <div className="container grid grid-cols-3 m-auto">
-      <SvgLogo />
+      <Link to={"/"}>
+        <SvgLogo />
+      </Link>
       <nav className='flex ml-10'>
         <ul className='flex items-center gap-12 justify-evenly'>
           <Link to={'/about'}>

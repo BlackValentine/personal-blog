@@ -4,6 +4,7 @@ import MdEditor from 'react-markdown-editor-lite';
 import { useLocation, useNavigate } from 'react-router-dom';
 import utils from '../../utils';
 import 'react-markdown-editor-lite/lib/index.css';
+import blogApi from '../../api/blogApi';
 
 const mdParser = new MarkdownIt();
 
@@ -19,10 +20,12 @@ function NewBlog(props) {
   const [rawContentBlog, setRawContentBlog] = useState(state ? state.rawContent : '')
   const [imageBlog, setImageBlog] = useState(state ? new Buffer(state.image, 'base64').toString('binary') : '')
   const [previewImageURL, setPreviewImageURL] = useState(state ? new Buffer(state.image, 'base64').toString('binary') : '')
+
   const handleEditorChange = ({ html, text }) => {
     setContentBlog(html)
     setRawContentBlog(text)
   }
+  
   const onImageUpload = (file) => {
     return new Promise(resolve => {
       const reader = new FileReader();
@@ -53,27 +56,27 @@ function NewBlog(props) {
   }
 
   const handleEditBlog = async () => {
-    // await blogApi.editBlog({
-    //   id,
-    //   titleBlog,
-    //   subtitleBlog,
-    //   contentBlog,
-    //   imageBlog,
-    //   rawContentBlog
-    // })
-    const path = '/blogs'
+    await blogApi.editBlog({
+      id,
+      titleBlog,
+      subtitleBlog,
+      contentBlog,
+      imageBlog,
+      rawContentBlog
+    })
+    const path = '/'
     navigate(path)
   }
 
   const handleUploadBlog = async () => {
-    // await blogApi.createBlog({
-    //   titleBlog,
-    //   subtitleBlog,
-    //   contentBlog,
-    //   imageBlog,
-    //   rawContentBlog
-    // })
-    const path = '/blogs'
+    await blogApi.createBlog({
+      titleBlog,
+      subtitleBlog,
+      contentBlog,
+      imageBlog: '123',
+      rawContentBlog
+    })
+    const path = '/'
     navigate(path)
   }
 
