@@ -10,6 +10,7 @@ import AboutMeScreen from './components/screens/AboutMeScreen';
 import SignUpScreen from './components/screens/SignUpScreen';
 import NotFoundScreen from './components/screens/NotFoundScreen';
 import NewBlogScreen from './components/screens/NewBlogScreen';
+import CategoryScreen from './components/screens/CategoryScreen';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/register" element={<SignUpScreen />} />
         <Route path="/about" element={<AboutMeScreen />} />
         <Route path="/blog/edit" element={<NewBlogScreen />} />
+        <Route path="/category" element={<CategoryScreen />} />
         <Route path="*" element={<NotFoundScreen />} />
       </Routes>
       <Footer />

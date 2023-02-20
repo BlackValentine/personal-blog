@@ -9,3 +9,18 @@
     color: #F67280;
   }
 }
+
+.search-input {
+  animation: inputMove 0.2s linear;
+}
+
+@keyframes inputMove {
+  from {
+    opacity: 0;
+    top: 30px;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

@@ -41,7 +41,7 @@ function Footer(props) {
           </ul>
         </div>
         <div className="flex py-7 border-t border-solid border-white/10">
-          <span className='text-white mx-auto'>© Copyright 2022 BlackValentine, All Rights Reserved.</span>
+          <span className='text-white mx-auto'>© Copyright 2023 BlackValentine, All Rights Reserved.</span>
         </div>
       </div>
     </div>

@@ -18,7 +18,11 @@ module.exports = {
       'youtube-red': '#e52d27',
       'strong-red': '#bd081c',
     },
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        '5/2': '5fr 2fr'
+      }
+    },
   },
   plugins: [],
 }

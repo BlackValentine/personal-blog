@@ -8,21 +8,34 @@ function Header(props) {
   const dispatch = useDispatch();
   const lightMode = useSelector(state => state.general.lightMode)
 
+  const [onSearch, setOnSearch] = useState(false)
+
+  const handleClickSearchBtn = () => {
+    setOnSearch(!onSearch);
+  }
+
   return (
     <div className="container grid grid-cols-3 m-auto">
       <Link to={"/"}>
         <SvgLogo />
       </Link>
-      <nav className='flex ml-10'>
-        <ul className='flex items-center gap-12 justify-evenly'>
+      <nav className='flex'>
+        <ul className='w-full flex items-center justify-between gap-12'>
+          <Link to={'/'}>
+            <li className='font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear whitespace-nowrap'>Home</li>
+          </Link>
           <Link to={'/about'}>
-            <li className='font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear'>About me</li>
+            <li className='font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear whitespace-nowrap'>About me</li>
           </Link>
           <Link to={'/login'}>
-            <li className='font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear'>Login</li>
+            <li className='font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear whitespace-nowrap'>Login</li>
           </Link>
-          <li className='font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear'>Blogs</li>
-          <li className='font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear'>404 Page</li>
+          <Link to={'/category'}>
+            <li className='font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear whitespace-nowrap'>Category</li>
+          </Link>
+          <a href="http://localhost:3001/" target="_blank" rel="noreferrer">
+            <li className='font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear whitespace-nowrap'>Resume</li>
+          </a>
         </ul>
       </nav>
 
@@ -35,10 +48,18 @@ function Header(props) {
             {lightMode ? <i className="fas fa-sun m-auto group-hover:text-white"></i> : <i className="fas fa-moon m-auto group-hover:text-white"></i>}
           </div>
         </div>
-        <div className="group">
-          <div className="w-8 h-8 flex border border-solid border-light-gray rounded-full cursor-pointer group-hover:bg-pastel-red">
-            <i className="fas fa-search m-auto group-hover:text-white"></i>
+        <div className="relative group">
+          <div onClick={handleClickSearchBtn} className={`w-8 h-8 flex border border-solid border-light-gray rounded-full cursor-pointer group-hover:bg-pastel-red ${onSearch ? "bg-pastel-red" : ""}`}>
+            <i className={`fas fa-search m-auto group-hover:text-white ${onSearch ? "text-white" : ""}`}></i>
           </div>
+          {onSearch
+            ?
+            <div className="absolute top-11 right-0 z-10 border border-pastel-red rounded-lg search-input">
+              <input className='px-3 py-1 rounded-lg text-sm' type="text" placeholder='Search...' />
+            </div>
+            :
+            ""
+          }
         </div>
       </div>
     </div>

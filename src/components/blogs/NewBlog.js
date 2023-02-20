@@ -73,11 +73,11 @@ function NewBlog(props) {
       titleBlog,
       subtitleBlog,
       contentBlog,
-      imageBlog: '123',
+      imageBlog,
       rawContentBlog
     })
-    const path = '/'
-    navigate(path)
+    // const path = '/'
+    // navigate(path)
   }
 
   return (
