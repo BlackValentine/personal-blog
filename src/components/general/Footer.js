@@ -15,27 +15,27 @@ function Footer(props) {
           </div>
           <ul className='flex items-center gap-5 mb-10'>
             <li>
-              <a className='flex items-center gap-1' href="https://www.facebook.com/">
-                <i className="fab fa-facebook-f text-light-gray"></i>
-                <span className='text-light-gray'>Facebook</span>
+              <a className='flex items-center gap-1 text-light-gray hover:text-pastel-red transition-color duration-300 ease-linear' href="https://www.facebook.com/">
+                <i className="fab fa-facebook-f"></i>
+                <span>Facebook</span>
               </a>
             </li>
             <li>
-              <a className='flex items-center gap-1' href="https://www.instagram.com/">
-                <i className="fab fa-instagram text-light-gray"></i>
-                <span className='text-light-gray'>Instagram</span>
+              <a className='flex items-center gap-1 text-light-gray hover:text-pastel-red transition-color duration-300 ease-linear' href="https://www.instagram.com/">
+                <i className="fab fa-instagram"></i>
+                <span>Instagram</span>
               </a>
             </li>
             <li>
-              <a className='flex items-center gap-1' href="https://github.com/">
-                <i className="fab fa-github text-light-gray"></i>
-                <span className='text-light-gray'>Github</span>
+              <a className='flex items-center gap-1 text-light-gray hover:text-pastel-red transition-color duration-300 ease-linear' href="https://github.com/">
+                <i className="fab fa-github"></i>
+                <span>Github</span>
               </a>
             </li>
             <li>
-              <a href='https://www.linkedin.com/' className='flex items-center gap-1'>
-                <i className="fab fa-linkedin-in text-light-gray"></i>
-                <span className='text-light-gray'>Linkedin</span>
+              <a className='flex items-center gap-1 text-light-gray hover:text-pastel-red transition-color duration-300 ease-linear' href='https://www.linkedin.com/'>
+                <i className="fab fa-linkedin-in"></i>
+                <span>Linkedin</span>
               </a>
             </li>
           </ul>
