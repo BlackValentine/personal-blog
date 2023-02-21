@@ -15,11 +15,11 @@ function Header(props) {
   }
 
   return (
-    <div className="container grid grid-cols-3 m-auto">
+    <div className="container lg:grid lg:grid-cols-3 lg:m-auto flex items-center justify-between !m-0">
       <Link to={"/"}>
         <SvgLogo />
       </Link>
-      <nav className='flex'>
+      <nav className='lg:flex z-10 hidden'>
         <ul className='w-full flex items-center justify-between gap-12'>
           <Link to={'/'}>
             <li className='font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear whitespace-nowrap'>Home</li>

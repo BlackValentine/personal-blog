@@ -7,13 +7,13 @@ import ListCategory from '../categories/ListCategory';
 
 function CategoryScreen(props) {
   return (
-    <div className="bg-ghost-white">
+    <div className="bg-ghost-white lg:px-10 px-0">
       <div className="container">
         <HeaderCategory />
       </div>
-      <div className="grid grid-cols-5/2 gap-5 container">
+      <div className="lg:grid lg:grid-cols-5/2 lg:items-start flex flex-col items-center gap-5 container">
         <CategoryBlogList />
-        <div className="flex flex-col my-14">
+        <div className="flex flex-col lg:my-14 my-0 lg:w-auto w-128">
           <AboutMeCategory />
           <ListCategory />
           <InstaCategory />

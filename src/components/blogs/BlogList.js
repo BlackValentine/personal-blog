@@ -5,7 +5,8 @@ import blog2 from '../../assets/images/blog2.jpg';
 import blog3 from '../../assets/images/blog3.jpg';
 import blog4 from '../../assets/images/blog4.jpg';
 import blog5 from '../../assets/images/blog5.jpg';
-import blog6 from '../../assets/images/blog6.jpg';
+// import blog6 from '../../assets/images/blog6.jpg';
+import blog6 from '../../assets/images/aboutme1.jpeg';
 
 function BlogList(props) {
   const blogList = [
@@ -41,7 +42,7 @@ function BlogList(props) {
     },
   ]
   return (
-    <div className="container grid grid-cols-3 gap-x-5 pt-24">
+    <div className="container grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-5 lg:pt-24 !pt-20">
       {blogList.map((blogItem, index) => {
         return (
           <BlogItem

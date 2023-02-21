@@ -14,7 +14,6 @@ function CarouselSection(props) {
     { id: 3, image: bg3, type: "Food" },
   ]
 
-
   return (
     <Swiper
       className="mySwiper"

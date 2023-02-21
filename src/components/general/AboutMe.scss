@@ -46,3 +46,10 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .about__layout {
+    gap: 10px;
+    grid-template-rows: 150px 80px 150px;
+  }
+}

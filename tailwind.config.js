@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: ["./src/**/*.{html,js}"],
   theme: {
     colors: {
@@ -21,6 +22,9 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         '5/2': '5fr 2fr'
+      },
+      spacing: {
+        '128': '32rem',
       }
     },
   },
