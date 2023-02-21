@@ -17,36 +17,37 @@
 }
 
 .blog-detail__content {
-  margin: 0 0 5rem;
+  margin: 50px 0;
 
   p {
-    margin-bottom: 1.2rem;
-    font-size: 1.6rem;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #94979E;
 
     @include mixin.tablet {
-      margin-bottom: 1rem;
-      font-size: 1.4rem;
+      margin-bottom: 10px;
+      font-size: 14px;
     }
 
     @include mixin.mobile {
-      margin-bottom: 0.8rem;
-      font-size: 1.2rem;
+      margin-bottom: 8px;
+      font-size: 12px;
     }
   }
 
   h2 {
-    margin-top: 4rem;
-    margin-bottom: 1.6rem;
-    font-size: 2.4rem;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    font-size: 24px;
 
     @include mixin.tablet {
-      margin-bottom: 1rem;
-      font-size: 2rem;
+      margin-bottom: 10px;
+      font-size: 20px;
     }
 
     @include mixin.mobile {
-      margin-bottom: 0.8rem;
-      font-size: 1.6rem;
+      margin-bottom: 8px;
+      font-size: 16px;
     }
   }
 }
