@@ -1,3 +1,5 @@
+@use './mixins/mixin';
+
 .button-transparent {
   font-size: 14px;
   font-weight: 600;
@@ -12,6 +14,41 @@
 
 .search-input {
   animation: inputMove 0.2s linear;
+}
+
+.blog-detail__content {
+  margin: 0 0 5rem;
+
+  p {
+    margin-bottom: 1.2rem;
+    font-size: 1.6rem;
+
+    @include mixin.tablet {
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+
+    @include mixin.mobile {
+      margin-bottom: 0.8rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  h2 {
+    margin-top: 4rem;
+    margin-bottom: 1.6rem;
+    font-size: 2.4rem;
+
+    @include mixin.tablet {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    @include mixin.mobile {
+      margin-bottom: 0.8rem;
+      font-size: 1.6rem;
+    }
+  }
 }
 
 @keyframes inputMove {

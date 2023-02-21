@@ -48,6 +48,14 @@ img {
   padding-top: 100%;
 }
 
+.pb-half {
+  padding-bottom: 50%;
+}
+
+.pb-one-third {
+  padding-bottom: 33.33333%;
+}
+
 .container {
   max-width: 1280px;
   margin-left: auto;

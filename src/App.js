@@ -11,6 +11,7 @@ import SignUpScreen from './components/screens/SignUpScreen';
 import NotFoundScreen from './components/screens/NotFoundScreen';
 import NewBlogScreen from './components/screens/NewBlogScreen';
 import CategoryScreen from './components/screens/CategoryScreen';
+import BlogDetailScreen from './components/screens/BlogDetailScreen';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/register" element={<SignUpScreen />} />
         <Route path="/about" element={<AboutMeScreen />} />
         <Route path="/blog/edit" element={<NewBlogScreen />} />
+        <Route path="/blog/:id" element={<BlogDetailScreen />} />
         <Route path="/category" element={<CategoryScreen />} />
         <Route path="*" element={<NotFoundScreen />} />
       </Routes>
