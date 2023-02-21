@@ -8,14 +8,19 @@ function Header(props) {
   const dispatch = useDispatch();
   const lightMode = useSelector(state => state.general.lightMode)
 
-  const [onSearch, setOnSearch] = useState(false)
+  const [onSearch, setOnSearch] = useState(false);
+  const [onMenu, setOnMenu] = useState(false);
 
   const handleClickSearchBtn = () => {
     setOnSearch(!onSearch);
   }
 
+  const handleClickMenuBtn = () => {
+    setOnMenu(!onMenu);
+  }
+
   return (
-    <div className="container lg:grid lg:grid-cols-3 lg:m-auto flex items-center justify-between !m-0">
+    <div className="container lg:grid lg:grid-cols-3 lg:m-auto flex items-center justify-between lg:!mx-auto !m-0">
       <Link to={"/"}>
         <SvgLogo />
       </Link>
@@ -48,7 +53,7 @@ function Header(props) {
             {lightMode ? <i className="fas fa-sun m-auto group-hover:text-white"></i> : <i className="fas fa-moon m-auto group-hover:text-white"></i>}
           </div>
         </div>
-        <div className="relative group">
+        <div className="relative group mr-2">
           <div onClick={handleClickSearchBtn} className={`w-8 h-8 flex border border-solid border-light-gray rounded-full cursor-pointer group-hover:bg-pastel-red ${onSearch ? "bg-pastel-red" : ""}`}>
             <i className={`fas fa-search m-auto group-hover:text-white ${onSearch ? "text-white" : ""}`}></i>
           </div>
@@ -60,6 +65,11 @@ function Header(props) {
             :
             ""
           }
+        </div>
+        <div className="group mr-2 lg:hidden block">
+          <div onClick={handleClickMenuBtn} className={`w-8 h-8 flex border border-solid border-light-gray rounded-full cursor-pointer group-hover:bg-pastel-red ${onMenu ? "bg-pastel-red" : ""}`}>
+            <i className={`fas fa-bars m-auto group-hover:text-white ${onMenu ? "text-white" : ""}`}></i>
+          </div>
         </div>
       </div>
     </div>
