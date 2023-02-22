@@ -12,10 +12,21 @@ import NotFoundScreen from './components/screens/NotFoundScreen';
 import NewBlogScreen from './components/screens/NewBlogScreen';
 import CategoryScreen from './components/screens/CategoryScreen';
 import BlogDetailScreen from './components/screens/BlogDetailScreen';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAllBlogs } from './api/blogApi';
+import Loading from './components/general/Loading';
 
 function App() {
+  const dispatch = useDispatch();
+  const blogs = useSelector(state => state.blog.blogs);
+  useEffect(() => {
+    dispatch(getAllBlogs());
+  }, [dispatch])
+
   return (
     <div className="App">
+      <Loading />
       <Header />
       <Routes>
         <Route path="/" element={<HomeScreen />} />

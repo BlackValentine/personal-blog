@@ -20,12 +20,13 @@ function NewBlog(props) {
   const [rawContentBlog, setRawContentBlog] = useState(state ? state.rawContent : '')
   const [imageBlog, setImageBlog] = useState(state ? new Buffer(state.image, 'base64').toString('binary') : '')
   const [previewImageURL, setPreviewImageURL] = useState(state ? new Buffer(state.image, 'base64').toString('binary') : '')
+  const [typeBlog, setTypeBlog] = useState("Livestyle")
 
   const handleEditorChange = ({ html, text }) => {
     setContentBlog(html)
     setRawContentBlog(text)
   }
-  
+
   const onImageUpload = (file) => {
     return new Promise(resolve => {
       const reader = new FileReader();
@@ -42,6 +43,10 @@ function NewBlog(props) {
 
   const handleInputSubtitle = (e) => {
     setSubtitleBlog(e.target.value)
+  }
+
+  const handleChooseBlogType = (e) => {
+    setTypeBlog(e.target.value);
   }
 
   const hangelInputImage = async (e) => {
@@ -62,7 +67,8 @@ function NewBlog(props) {
       subtitleBlog,
       contentBlog,
       imageBlog,
-      rawContentBlog
+      rawContentBlog,
+      typeBlog
     })
     const path = '/'
     navigate(path)
@@ -74,15 +80,16 @@ function NewBlog(props) {
       subtitleBlog,
       contentBlog,
       imageBlog,
-      rawContentBlog
+      rawContentBlog,
+      typeBlog
     })
-    // const path = '/'
-    // navigate(path)
+    const path = '/'
+    navigate(path)
   }
 
   return (
     <div className="bg-ghost-white min-h-full w-full px-5">
-      <div className="pt-12 w-full">
+      <div className="flex items-center justify-between gap-5 pt-12 w-full">
         <input
           type="text"
           name="title"
@@ -91,6 +98,17 @@ function NewBlog(props) {
           onChange={handleInputTitleBlog}
           value={titleBlog}
         />
+        <select 
+          onClick={(e) => handleChooseBlogType(e)} 
+          className="mb-5 p-3 text-base border border-solid border-pastel-red rounded-lg text-pastel-red outline-none cursor-pointer"
+        >
+          <option value="Livestyle">Livestyle</option>
+          <option value="Food">Food</option>
+          <option value="Technology">Technology</option>
+          <option value="Travel">Travel</option>
+          <option value="Fashion">Fashion</option>
+          <option value="Art & Design">Art & Design</option>
+        </select>
       </div>
 
       <div className="flex">

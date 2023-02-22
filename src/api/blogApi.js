@@ -1,3 +1,5 @@
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { sendRequest } from '../utils/utils';
 import axiosClient from './axiosClient'
 
 const createBlog = (dataBlog) => {
@@ -7,7 +9,8 @@ const createBlog = (dataBlog) => {
     subTitle: dataBlog.subtitleBlog,
     image: dataBlog.imageBlog,
     content: dataBlog.contentBlog,
-    rawContent: dataBlog.rawContentBlog
+    rawContent: dataBlog.rawContentBlog,
+    type: dataBlog.typeBlog
   })
 }
 
@@ -24,7 +27,8 @@ const editBlog = (dataBlog) => {
     subTitle: dataBlog.subtitleBlog,
     image: dataBlog.imageBlog,
     content: dataBlog.contentBlog,
-    rawContent: dataBlog.rawContentBlog
+    rawContent: dataBlog.rawContentBlog,
+    type: dataBlog.typeBlog
   })
 }
 
@@ -43,3 +47,11 @@ const blogApi = {
 }
 
 export default blogApi;
+
+export const getAllBlogs = createAsyncThunk(
+  "api/blog/all",
+  (payload, thunkAPI) => {
+      const url = `/blog/all`
+      return sendRequest(url, payload, thunkAPI, 'get')
+  }
+)
