@@ -4,7 +4,7 @@ import './Users.scss';
 
 function ResetPasswordForm(props) {
   return (
-    <div className='flex bg-ghost-white p-10 height-fit'>
+    <div className='flex bg-ghost-white height-fit'>
       <div className="m-auto p-7 w-128 bg-white rounded-3xl shadow-xl">
         <div className="w-8 h-1 bg-pastel-red mb-1"></div>
         <h3 className='font-extrabold text-2xl mb-5'>Reset Password</h3>
