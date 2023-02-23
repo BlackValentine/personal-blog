@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Users.scss';
 
 function ResetPasswordForm(props) {
   return (
-    <div className='flex bg-ghost-white p-10'>
-      <div className="mx-auto p-7 w-128 bg-white rounded-3xl shadow-xl">
+    <div className='flex bg-ghost-white p-10 height-fit'>
+      <div className="m-auto p-7 w-128 bg-white rounded-3xl shadow-xl">
         <div className="w-8 h-1 bg-pastel-red mb-1"></div>
         <h3 className='font-extrabold text-2xl mb-5'>Reset Password</h3>
         <input className='w-full px-5 py-3 mb-5 rounded-xl border border-solid border-very-light-gray shadow bg-ghost-white text-sm text-black-russian' type="email" placeholder='Email*' />
