@@ -14,7 +14,9 @@ function LoginForm(props) {
             <input id='remember-me' type="checkbox" />
             <label htmlFor='remember-me' className='text-sm ml-1 mr-3'>Remember Me</label>
           </div>
-          <button className='button-transparent'>Forgot Password?</button>
+          <Link to={'/reset'}>
+            <button className='button-transparent'>Forgot Password?</button>
+          </Link>
         </div>
         <button className='w-full p-2 rounded-full bg-pastel-red text-white text-sm my-5'>Login Now</button>
         <div className="flex items-center">

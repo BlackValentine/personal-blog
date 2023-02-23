@@ -13,13 +13,13 @@ import NewBlogScreen from './components/screens/NewBlogScreen';
 import CategoryScreen from './components/screens/CategoryScreen';
 import BlogDetailScreen from './components/screens/BlogDetailScreen';
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { getAllBlogs } from './api/blogApi';
 import Loading from './components/general/Loading';
+import ResetPasswordScreen from './components/screens/ResetPasswordScreen';
 
 function App() {
   const dispatch = useDispatch();
-  const blogs = useSelector(state => state.blog.blogs);
   useEffect(() => {
     dispatch(getAllBlogs());
   }, [dispatch])
@@ -32,6 +32,7 @@ function App() {
         <Route path="/" element={<HomeScreen />} />
         <Route path="/login" element={<LoginScreen />} />
         <Route path="/register" element={<SignUpScreen />} />
+        <Route path="/reset" element={<ResetPasswordScreen />} />
         <Route path="/about" element={<AboutMeScreen />} />
         <Route path="/blog/edit" element={<NewBlogScreen />} />
         <Route path="/blog/:id" element={<BlogDetailScreen />} />
