@@ -35,7 +35,7 @@ function Header(props) {
           <Link to={'/login'}>
             <li className='font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear whitespace-nowrap'>Login</li>
           </Link>
-          <Link to={'/category'}>
+          <Link to={'/category?page=1'}>
             <li className='font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear whitespace-nowrap'>Category</li>
           </Link>
           <a href="http://localhost:3001/" target="_blank" rel="noreferrer">

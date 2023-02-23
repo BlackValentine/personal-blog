@@ -42,7 +42,7 @@ function CategoryBlogList(props) {
   ]
   return (
     <div className="container grid md:grid-cols-2 grid-cols-1 gap-x-5 pt-20 lg:!mt-0 !mt-20 sm:!px-0">
-      {blogList.map((blogItem, index) => {
+      {props.blogs.map((blogItem, index) => {
         return (
           <BlogItem
             key={index}

@@ -22,7 +22,7 @@ function HomeScreen(props) {
       <CarouselSection />
       <div className="bg-ghost-white">
         <BlogList blogs={blogsShow} />
-        <div className="flex mb-10">
+        <div className="flex pb-10">
           <button
             className="mx-auto bg-pastel-red text-white font-bold text-base h-full py-3 px-5 rounded-full hover:opacity-80"
             onClick={() => handleReadMore(1)}
