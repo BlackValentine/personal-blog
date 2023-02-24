@@ -9,22 +9,8 @@ function Header(props) {
   const dispatch = useDispatch();
   const lightMode = useSelector(state => state.general.lightMode)
 
-  console.log(lightMode)
-
   const [onSearch, setOnSearch] = useState(false);
   const [onMenu, setOnMenu] = useState(false);
-  const [navScroll, setNavScroll] = useState(false)
-
-  useEffect(() => {
-    window.onscroll = () => {
-      if (window.scrollY >= 50) {
-        setNavScroll(true)
-      }
-      else {
-        setNavScroll(false)
-      }
-    }
-  })
 
   const handleClickSearchBtn = () => {
     setOnSearch(!onSearch);
