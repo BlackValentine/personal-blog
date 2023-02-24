@@ -8,9 +8,9 @@ import insta6 from '../../assets/images/aboutme6.jpeg';
 
 function InstaCategory(props) {
   return (
-    <div className="flex flex-col bg-white rounded-xl p-7 mb-5">
+    <div className="flex flex-col bg-white dark:bg-very-dark-gray rounded-xl p-7 mb-5 transition-mode">
       <div className="h-0.5 w-7 mb-1 bg-pastel-red"></div>
-      <h3 className="font-bold text-xl mb-3">Instagram</h3>
+      <h3 className="font-bold text-xl mb-3 dark:text-white transition-mode">Instagram</h3>
       <div className="grid grid-cols-3 gap-1">
         <div className="rounded overflow-hidden cursor-pointer">
           <div className="pt-full relative">

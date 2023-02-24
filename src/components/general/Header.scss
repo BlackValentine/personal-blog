@@ -1,0 +1,14 @@
+.nav-item:hover .nav-item__underline {
+  visibility: visible;
+  width: 100%;
+}
+
+.nav-item__underline {
+  visibility: hidden;
+  width: 0;
+  transition: all .3s linear;
+}
+
+.nav-bar__small {
+  transition: all .3s linear;
+}

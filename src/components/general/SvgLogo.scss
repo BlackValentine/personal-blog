@@ -1,9 +1,9 @@
 $colors: #F2385A, #F5A503, #ffffff, #8892AF, #64FFDA;
 $max: length($colors);
 $dash: 70;
-$dash-gap: 10;
+$dash-gap: 5;
 $dash-space: $dash * ($max - 1) + $dash-gap * $max;
-$time: 6s;
+$time: 10s;
 $time-step: $time/$max;
 
 .text--line {
@@ -13,7 +13,7 @@ $time-step: $time/$max;
 .svg-animation {
   font: 4rem/1 Arial;
   width: 300px !important;
-  height: 75px !important;
+  height: 80px !important;
 }
 
 .text-copy {

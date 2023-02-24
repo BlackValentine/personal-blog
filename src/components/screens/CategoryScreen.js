@@ -40,7 +40,7 @@ function CategoryScreen(props) {
   }, [currentPage])
 
   return (
-    <div className="bg-ghost-white lg:px-10 px-0">
+    <div className="bg-ghost-white dark:bg-eerie-black lg:px-10 px-0 transition-mode">
       <div className="container">
         <HeaderCategory />
       </div>
@@ -52,7 +52,7 @@ function CategoryScreen(props) {
               {listPagination.map(pageItem => {
                 return (
                   <div className="group" key={pageItem} onClick={() => handleClickPage(pageItem)}>
-                    <div className={`flex w-11 h-11 border border-solid border-pastel-red rounded-full group-hover:bg-pastel-red cursor-pointer ${pageItem === activePage ? "bg-pastel-red" : "bg-white"}`}>
+                    <div className={`flex w-11 h-11 border border-solid border-pastel-red rounded-full group-hover:bg-pastel-red cursor-pointer ${pageItem === activePage ? "bg-pastel-red" : "bg-transition"}`}>
                       <span className={`m-auto group-hover:text-white ${pageItem === activePage ? "text-white" : "text-pastel-red"}`}>{pageItem}</span>
                     </div>
                   </div>

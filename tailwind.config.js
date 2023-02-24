@@ -18,6 +18,7 @@ module.exports = {
       'cherenkov-radiation': '#1dcaff',
       'youtube-red': '#e52d27',
       'strong-red': '#bd081c',
+      'very-dark-gray': '#2B2B2B',
     },
     extend: {
       gridTemplateColumns: {

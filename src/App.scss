@@ -24,6 +24,10 @@
   animation: inputMove 0.2s linear;
 }
 
+.transition-mode {
+  transition: all .3s linear;
+}
+
 .blog-detail__content {
   margin-bottom: 50px;
 

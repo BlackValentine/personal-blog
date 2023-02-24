@@ -1,30 +1,42 @@
 import React from 'react';
+import CategoryItem from './CategoryItem';
 
 function ListCategory(props) {
+  const categoryList = [
+    {
+      type: 'Livestyle',
+      count: 22
+    },
+    {
+      type: 'Fashion',
+      count: 22
+    },
+    {
+      type: 'Technology',
+      count: 22
+    },
+    {
+      type: 'Travel',
+      count: 22
+    },
+    {
+      type: 'Works',
+      count: 22
+    },
+  ]
   return (
-    <div className="flex flex-col bg-white rounded-xl p-7 mb-5">
+    <div className="flex flex-col bg-white dark:bg-very-dark-gray rounded-xl p-7 mb-5 transition-mode">
       <div className="h-0.5 w-7 mb-1 bg-pastel-red"></div>
-      <h3 className="font-bold text-xl mb-3">Category</h3>
-      <div className="flex items-center justify-between bg-ghost-white rounded-lg px-5 py-4 mb-3">
-        <span className='px-3 py-1 bg-pastel-red text-white font-bold text-sm rounded-full cursor-pointer hover:opacity-80'>Livestyle</span>
-        <span className='text-spanish-gray text-sm font-bold'>22 posts</span>
-      </div>
-      <div className="flex items-center justify-between bg-ghost-white rounded-lg px-5 py-4 mb-3">
-        <span className='px-3 py-1 bg-pastel-red text-white font-bold text-sm rounded-full cursor-pointer hover:opacity-80'>Fashion</span>
-        <span className='text-spanish-gray text-sm font-bold'>22 posts</span>
-      </div>
-      <div className="flex items-center justify-between bg-ghost-white rounded-lg px-5 py-4 mb-3">
-        <span className='px-3 py-1 bg-pastel-red text-white font-bold text-sm rounded-full cursor-pointer hover:opacity-80'>Technology</span>
-        <span className='text-spanish-gray text-sm font-bold'>22 posts</span>
-      </div>
-      <div className="flex items-center justify-between bg-ghost-white rounded-lg px-5 py-4 mb-3">
-        <span className='px-3 py-1 bg-pastel-red text-white font-bold text-sm rounded-full cursor-pointer hover:opacity-80'>Travel</span>
-        <span className='text-spanish-gray text-sm font-bold'>22 posts</span>
-      </div>
-      <div className="flex items-center justify-between bg-ghost-white rounded px-5 py-4 mb-3">
-        <span className='px-3 py-1 bg-pastel-red text-white font-bold text-sm rounded-full cursor-pointer hover:opacity-80'>Works</span>
-        <span className='text-spanish-gray text-sm font-bold'>22 posts</span>
-      </div>
+      <h3 className="font-bold text-xl mb-3 dark:text-white transition-mode">Category</h3>
+      {categoryList.map((categoryItem, index) => {
+        return (
+          <CategoryItem 
+            key={index}
+            type={categoryItem.type}
+            count={categoryItem.count}
+          />
+        )
+      })}
     </div>
   );
 }

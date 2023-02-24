@@ -20,7 +20,7 @@ function HomeScreen(props) {
   return (
     <div>
       <CarouselSection />
-      <div className="bg-ghost-white">
+      <div className="bg-ghost-white dark:bg-eerie-black transition-mode">
         <BlogList blogs={blogsShow} />
         <div className={`${limit >= allBlogs.length ? 'hidden' : 'flex'} pb-10`}>
           <button

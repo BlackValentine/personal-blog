@@ -11,11 +11,11 @@ import aboutMe7 from "../../assets/images/aboutme7.jpeg";
 
 function AboutMe(props) {
   return (
-    <div className='flex flex-col bg-ghost-white'>
+    <div className='flex flex-col bg-ghost-white dark:bg-eerie-black transition-mode'>
       <div className="flex flex-col items-center container px-auto !py-10">
         <img className='h-24 w-24 rounded-full mb-6' src={avatar} alt="" />
-        <h3 className='text-2xl font-extrabold text-center mb-4'>Hi, I'm Black Valentine</h3>
-        <p className='text-spanish-gray text-center mb-5'>I'm Black Valentine, husband, father and boring developer. I love coding, travel, nature and universe. Welcome to my world.</p>
+        <h3 className='text-2xl font-extrabold text-center mb-4 dark:text-white transition-mode'>Hi, I'm Black Valentine</h3>
+        <p className='text-spanish-gray text-center mb-5 dark:text-light-gray transition-mode'>I'm Black Valentine, husband, father and boring developer. I love coding, travel, nature and universe. Welcome to my world.</p>
         <div className="flex items-center gap-3">
           <div className="w-6 h-6 rounded-full bg-muted-lavender"></div>
           <div className="w-6 h-6 rounded-full bg-royal-fuchsia"></div>
