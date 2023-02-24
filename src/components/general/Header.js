@@ -65,12 +65,12 @@ function Header(props) {
           </ul>
         </nav>
 
-        <nav style={{ top: '74px' }} className={`absolute left-0 bg-white w-full border-t border-solid border-pastel-red shadow-md z-10 ${onMenu ? 'lg:invisible visible' : 'invisible'}`}>
+        <nav style={{ top: '74px' }} className={`absolute left-0 bg-white dark:bg-very-dark-gray w-full border-t border-solid border-pastel-red shadow-md z-10 ${onMenu ? 'lg:invisible visible' : 'invisible'}`}>
           <ul className='w-full flex flex-col items-center justify-between gap-6 py-3'>
             <Link to={'/'}>
               <li
                 onClick={handleClickMenuBtn}
-                className='nav-item font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear whitespace-nowrap dark:text-white transition-mode'
+                className='nav-item font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear whitespace-nowrap dark:text-white'
               >
                 <span>Home</span>
                 <div className="nav-item__underline h-0.5 w-full bg-pastel-red"></div>
@@ -79,7 +79,7 @@ function Header(props) {
             <Link to={'/about'}>
               <li
                 onClick={handleClickMenuBtn}
-                className='nav-item font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear whitespace-nowrap dark:text-white transition-mode'
+                className='nav-item font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear whitespace-nowrap dark:text-white'
               >
                 <span>About Me</span>
                 <div className="nav-item__underline h-0.5 w-full bg-pastel-red"></div>
@@ -88,7 +88,7 @@ function Header(props) {
             <Link to={'/login'}>
               <li
                 onClick={handleClickMenuBtn}
-                className='nav-item font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear whitespace-nowrap dark:text-white transition-mode'
+                className='nav-item font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear whitespace-nowrap dark:text-white'
               >
                 <span>Login</span>
                 <div className="nav-item__underline h-0.5 w-full bg-pastel-red"></div>
@@ -97,7 +97,7 @@ function Header(props) {
             <Link to={'/category'}>
               <li
                 onClick={handleClickMenuBtn}
-                className='nav-item font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear whitespace-nowrap dark:text-white transition-mode'
+                className='nav-item font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear whitespace-nowrap dark:text-white'
               >
                 <span>Category</span>
                 <div className="nav-item__underline h-0.5 w-full bg-pastel-red"></div>
@@ -106,7 +106,7 @@ function Header(props) {
             <a href="https://resume-fe-nu.vercel.app/" target="_blank" rel="noreferrer">
               <li
                 onClick={handleClickMenuBtn}
-                className='nav-item font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear whitespace-nowrap dark:text-white transition-mode'
+                className='nav-item font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear whitespace-nowrap dark:text-white'
               >
                 <span>Resume</span>
                 <div className="nav-item__underline h-0.5 w-full bg-pastel-red"></div>
