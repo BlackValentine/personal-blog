@@ -8,8 +8,16 @@
   background-color: transparent;
 
   &:hover {
-    color: #F67280;
+    color: #f67280;
   }
+}
+
+.truncate-4-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
 }
 
 .search-input {
@@ -22,7 +30,7 @@
   p {
     margin-bottom: 12px;
     font-size: 16px;
-    color: #94979E;
+    color: #94979e;
 
     @include mixin.tablet {
       margin-bottom: 10px;
@@ -39,7 +47,7 @@
     margin-top: 40px;
     margin-bottom: 16px;
     font-size: 24px;
-    color: #F67280;
+    color: #f67280;
 
     @include mixin.tablet {
       margin-bottom: 10px;

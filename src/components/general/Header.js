@@ -35,10 +35,10 @@ function Header(props) {
           <Link to={'/login'}>
             <li className='font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear whitespace-nowrap'>Login</li>
           </Link>
-          <Link to={'/category?page=1'}>
+          <Link to={'/category'}>
             <li className='font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear whitespace-nowrap'>Category</li>
           </Link>
-          <a href="http://localhost:3001/" target="_blank" rel="noreferrer">
+          <a href="https://resume-fe-nu.vercel.app/" target="_blank" rel="noreferrer">
             <li className='font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear whitespace-nowrap'>Resume</li>
           </a>
         </ul>

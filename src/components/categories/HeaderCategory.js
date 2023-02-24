@@ -6,7 +6,7 @@ function HeaderCategory(props) {
       <div className="flex items-center text-spanish-gray text-sm mb-2">
         <span>Home</span>
         <i className="fas fa-chevron-right mx-3"></i>
-        <span>Food</span>
+        <span>Category</span>
       </div>
       <div className="flex items-center text-3xl font-extrabold mb-3">
         <span className="text-black">Category :</span>

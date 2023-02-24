@@ -22,8 +22,6 @@ function CarouselSection(props) {
         delay: 5000,
         disableOnInteraction: false
       }}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
     >
       {carouselList.map(carouselItem => {
         return (

@@ -25,7 +25,7 @@ function BlogDetailScreen(props) {
           src={avatar}
           alt="author"
         />
-        <p className="lg:text-base md:text-sm text-xs uppercase tracking-widest">By <span className="text-pastel-red">Black Valentine</span>, Updated on <span className="text-muted-lavender">{moment(blog?.updatedAt).format('LL')}</span></p>
+        <p className="lg:text-base md:text-sm text-xs uppercase tracking-widest">By <span className="text-pastel-red">Black Valentine</span>, Created on <span className="text-muted-lavender">{moment(blog?.created_at).format('LL')}</span></p>
         <p className="lg:text-base md:text-sm text-xs my-5 text-spanish-gray">
           {blog?.subTitle}
         </p>
