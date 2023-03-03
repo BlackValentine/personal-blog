@@ -5,8 +5,8 @@ import "../../index.css";
 function CarouselItem(props) {
   return (
     <div className='slider-item'>
-      <img style={{ height: '600px' }} src={props.image} alt="" className='carousel-item__image w-full object-cover object-center relative' />
-      <div style={{ height: '600px' }} className="absolute inset-0 w-full bg-black/60">
+      <img src={props.image} alt="" className='carousel-item__image w-full h-150 object-cover object-center relative' />
+      <div className="absolute inset-0 w-full h-150 bg-black/60">
         <div className="container absolute left-1/2 -translate-x-2/4 top-1/2 -translate-y-1/2 !mx-10">
           <div className="lg:mb-10 mb-4">
             <span className='px-3 py-1.5 bg-pastel-red text-white font-bold text-sm rounded-full'>{props.type}</span>

@@ -30,7 +30,7 @@ function BlogDetailScreen(props) {
           {blog?.subTitle}
         </p>
         <div
-          className="relative w-full pb-one-third rounded-2xl"
+          className="relative w-full pb-half rounded-2xl"
         >
           <img src={blog?.image} alt="blog-img" className="absolute inset-0 w-full h-full object-cover object-center rounded-2xl" />
         </div>

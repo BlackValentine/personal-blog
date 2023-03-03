@@ -45,8 +45,8 @@ function App() {
 
   return (
     <div className="App">
-      <Loading />
       <Header />
+      <Loading />
       <div style={{paddingTop: '75px'}}>
         <Routes>
           <Route path="/" element={<HomeScreen />} />
