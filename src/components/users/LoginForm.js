@@ -3,8 +3,12 @@ import { Link } from 'react-router-dom';
 import './Users.scss';
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useDispatch } from 'react-redux';
+import { login } from '../../api/userApi';
 
 function LoginForm(props) {
+  const dispatch = useDispatch();
+
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -15,11 +19,11 @@ function LoginForm(props) {
         .email("Invalid email format")
         .required("Required!"),
       password: Yup.string()
-        .min(8, "Minimum 8 characters")
         .required("Required!"),
     }),
     onSubmit: values => {
-      console.log(values)
+      dispatch(login(values));
+      window.location.href="/"
     },
   });
   return (
