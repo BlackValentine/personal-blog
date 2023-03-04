@@ -28,7 +28,7 @@ function RegisterForm(props) {
         .oneOf([Yup.ref("password")], "Password's not match")
         .required("Required!"),
       secretKey: Yup.string()
-        .matches("blackvalentine", "Wrong SecretKey")
+        .oneOf(["blackvalentine"], "Wrong SecretKey")
         .required("Required!"),
       terms: Yup.boolean().oneOf([true], 'Should be agree'),
     }),

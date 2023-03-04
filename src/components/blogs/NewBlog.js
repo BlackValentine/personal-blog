@@ -15,11 +15,11 @@ function NewBlog(props) {
   const id = state?.id;
 
   const [titleBlog, setTitleBlog] = useState(state ? state.title : '')
-  const [subtitleBlog, setSubtitleBlog] = useState(state ? state.subtitle : '')
+  const [subtitleBlog, setSubtitleBlog] = useState(state ? state.subTitle : '')
   const [contentBlog, setContentBlog] = useState(state ? state.content : '')
   const [rawContentBlog, setRawContentBlog] = useState(state ? state.rawContent : '')
-  const [imageBlog, setImageBlog] = useState(state ? new Buffer(state.image, 'base64').toString('binary') : '')
-  const [previewImageURL, setPreviewImageURL] = useState(state ? new Buffer(state.image, 'base64').toString('binary') : '')
+  const [imageBlog, setImageBlog] = useState(state ? state.image : '')
+  const [previewImageURL, setPreviewImageURL] = useState(state ? state.image : '')
   const [typeBlog, setTypeBlog] = useState("Livestyle")
 
   const handleEditorChange = ({ html, text }) => {
@@ -66,12 +66,10 @@ function NewBlog(props) {
       titleBlog,
       subtitleBlog,
       contentBlog,
-      imageBlog,
       rawContentBlog,
-      typeBlog
+      typeBlog,
     })
-    const path = '/'
-    navigate(path)
+    window.location.href='/'
   }
 
   const handleUploadBlog = async () => {
@@ -83,30 +81,29 @@ function NewBlog(props) {
       rawContentBlog,
       typeBlog
     })
-    const path = '/'
-    navigate(path)
+    window.location.href='/'
   }
 
   return (
-    <div className="bg-ghost-white min-h-full w-full px-5">
+    <div className="bg-ghost-white dark:bg-eerie-black min-h-full w-full px-5 transition-mode">
       <div className="flex items-center justify-between gap-5 pt-12 w-full">
         <input
           type="text"
           name="title"
-          className="mb-5 p-2.5 text-base border border-solid border-pastel-red rounded-lg w-full"
+          className="mb-5 p-2.5 text-base border border-solid border-pastel-red dark:border-spanish-gray dark:bg-very-dark-gray dark:text-white hover:dark:bg-eerie-black focus:dark:bg-eerie-black rounded-lg w-full transition-mode"
           placeholder="Type Blog Title ..."
           onChange={handleInputTitleBlog}
           value={titleBlog}
         />
         <select 
           onClick={(e) => handleChooseBlogType(e)} 
-          className="mb-5 p-3 text-base border border-solid border-pastel-red rounded-lg text-pastel-red outline-none cursor-pointer"
+          className="mb-5 p-3 text-base border border-solid border-pastel-red dark:border-spanish-gray dark:bg-very-dark-gray hover:dark:bg-eerie-black focus:dark:bg-eerie-black rounded-lg text-pastel-red dark:text-white outline-none cursor-pointer transition-mode"
         >
           <option value="Livestyle">Livestyle</option>
-          <option value="Food">Food</option>
+          <option value="Fashion">Fashion</option>
           <option value="Technology">Technology</option>
           <option value="Travel">Travel</option>
-          <option value="Fashion">Fashion</option>
+          <option value="Works">Works</option>
           <option value="Art & Design">Art & Design</option>
         </select>
       </div>
@@ -121,15 +118,15 @@ function NewBlog(props) {
           />
           <label
             htmlFor="blogImg"
-            className="flex text-center justify-center py-2.5 px-5 w-72 h-72 bg-white rounded-lg text-pastel-red text-base border border-solid border-pastel-red bg-center bg-no-repeat bg-contain cursor-pointer"
+            className="flex text-center justify-center py-2.5 px-5 w-72 h-72 bg-white rounded-lg text-pastel-red text-base border border-solid border-pastel-red bg-center dark:border-spanish-gray dark:bg-very-dark-gray dark:text-white hover:dark:bg-eerie-black focus:dark:bg-eerie-black bg-no-repeat bg-contain cursor-pointer transition-mode"
             style={{ backgroundImage: `url(${previewImageURL})` }}
           >
             <span className="m-auto">{previewImageURL === '' ? 'Thêm ảnh' : ''}</span>
           </label>
         </div>
-        <div className="h-72 w-full border border-solid border-pastel-red rounded-lg overflow-hidden">
+        <div className="h-72 w-full border border-solid border-pastel-red dark:border-spanish-gray rounded-lg overflow-hidden">
           <textarea
-            className="h-full w-full py-2.5 px-5 outline-none resize-none"
+            className="h-full w-full py-2.5 px-5 outline-none resize-none dark:bg-very-dark-gray dark:text-white hover:dark:bg-eerie-black focus:dark:bg-eerie-black transition-mode"
             placeholder="Type Blog Subtitle ..."
             onChange={(e) => handleInputSubtitle(e)}
             value={subtitleBlog}

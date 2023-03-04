@@ -9,20 +9,24 @@ function ListCategory(props) {
     },
     {
       type: 'Fashion',
-      count: 22
+      count: 2
     },
     {
       type: 'Technology',
-      count: 22
+      count: 5
     },
     {
       type: 'Travel',
-      count: 22
+      count: 13
     },
     {
       type: 'Works',
-      count: 22
+      count: 20
     },
+    {
+      type: 'Art & Design',
+      count: 10
+    }
   ]
   return (
     <div className="flex flex-col bg-white dark:bg-very-dark-gray rounded-xl p-7 mb-5 transition-mode">

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setLightMode } from '../../features/generalSlice';
@@ -116,7 +116,7 @@ function Header(props) {
             </div>
             {onSearch
               ?
-              <div className="absolute top-11 right-0 z-10 border border-pastel-red rounded-lg search-input">
+              <div className="absolute top-11 right-0 z-10 border border-pastel-red dark:border-very-light-gray rounded-lg search-input">
                 <input className='px-3 py-1 rounded-lg text-sm dark:bg-black dark:text-white' type="text" placeholder='Search...' />
               </div>
               :

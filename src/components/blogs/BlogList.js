@@ -14,6 +14,8 @@ function BlogList(props) {
             type={blogItem.type}
             id={blogItem.id}
             createdAt={blogItem.created_at}
+            content={blogItem.content}
+            rawContent={blogItem.rawContent}
           />
         )
       })}
