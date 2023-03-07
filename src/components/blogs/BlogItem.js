@@ -17,6 +17,10 @@ function BlogItem(props) {
     } })
   }
 
+  const handleDeleteBlog = () => {
+    props.onOpen();
+  }
+
   return (
     <div className='relative bg-white dark:bg-very-dark-gray p-7 rounded-2xl mb-20 transition-mode'>
       <Link to={`/blog/${props.id}`}>
@@ -39,7 +43,7 @@ function BlogItem(props) {
 
         <div className="flex items-center justify-end gap-2 mt-3">
           <button className="bg-muted-lavender text-white px-4 py-1 rounded hover:opacity-90" onClick={handleEditBlog}>Edit</button>
-          <button className="bg-youtube-red text-white px-3 py-1 rounded hover:opacity-90">Delete</button>
+          <button className="bg-youtube-red text-white px-3 py-1 rounded hover:opacity-90" onClick={handleDeleteBlog}>Delete</button>
         </div>
       </div>
     </div>

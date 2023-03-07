@@ -89,7 +89,7 @@ function Header(props) {
                 <div className="nav-item__underline h-0.5 w-full bg-pastel-red"></div>
               </li>
             </Link>
-            <a href="https://resume-fe-nu.vercel.app/" target="_blank" rel="noreferrer">
+            <a href="https://resume-fe-blackvalentine.vercel.app/" target="_blank" rel="noreferrer">
               <li
                 onClick={handleClickMenuBtn}
                 className='nav-item font-bold hover:text-pastel-red cursor-pointer transition-colors duration-200 ease-linear whitespace-nowrap dark:text-white'

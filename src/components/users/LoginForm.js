@@ -26,6 +26,7 @@ function LoginForm(props) {
       window.location.href="/"
     },
   });
+
   return (
     <div className='flex bg-ghost-white dark:bg-eerie-black py-20 transition-mode'>
       <div className="m-auto p-7 w-128 bg-white dark:bg-very-dark-gray rounded-3xl shadow-xl transition-mode">

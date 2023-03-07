@@ -16,6 +16,7 @@ function BlogList(props) {
             createdAt={blogItem.created_at}
             content={blogItem.content}
             rawContent={blogItem.rawContent}
+            onOpen={props.onOpen}
           />
         )
       })}
