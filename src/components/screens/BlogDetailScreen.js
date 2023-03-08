@@ -19,7 +19,7 @@ function BlogDetailScreen(props) {
   return (
     blog ? <div className="bg-ghost-white">
       <div className="container flex flex-col items-center">
-        <h3 className="pt-30 mt-14 mx-auto text-5xl text-center text-pastel-red">{blog?.title}</h3>
+        <h3 className="pt-30 mt-14 mx-auto lg:text-5xl text-3xl text-center text-pastel-red">{blog?.title}</h3>
         <img
           className="lg:w-24 md:w-20 w-16 lg:h-24 md:h-20 h-16 rounded-full my-5"
           src={avatar}

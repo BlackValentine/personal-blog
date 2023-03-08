@@ -5,20 +5,29 @@ import { useNavigate } from 'react-router-dom';
 
 function BlogItem(props) {
   const navigate = useNavigate();
+
+  const user = JSON.parse(localStorage.getItem('user'));
+
   const handleEditBlog = () => {
-    const path = `/blog/edit`
-    navigate(path, { state: {
-      image: props.image,
-      type: props.type,
-      title: props.title,
-      subTitle: props.subTitle,
-      content: props.content,
-      rawContent: props.rawContent
-    } })
+    if (user) {
+      const path = `/blog/edit`
+      navigate(path, {
+        state: {
+          image: props.image,
+          type: props.type,
+          title: props.title,
+          subTitle: props.subTitle,
+          content: props.content,
+          rawContent: props.rawContent
+        }
+      })
+    }
   }
 
   const handleDeleteBlog = () => {
-    props.onOpen();
+    if (user) {
+      props.onOpen();
+    }
   }
 
   return (
@@ -41,10 +50,10 @@ function BlogItem(props) {
           <span className="text-xs font-semibold dark:text-very-light-gray transition-mode">{moment(props?.createdAt).format('LL')}</span>
         </div>
 
-        <div className="flex items-center justify-end gap-2 mt-3">
+        {user && <div className="flex items-center justify-end gap-2 mt-3">
           <button className="bg-muted-lavender text-white px-4 py-1 rounded hover:opacity-90" onClick={handleEditBlog}>Edit</button>
           <button className="bg-youtube-red text-white px-3 py-1 rounded hover:opacity-90" onClick={handleDeleteBlog}>Delete</button>
-        </div>
+        </div>}
       </div>
     </div>
   );

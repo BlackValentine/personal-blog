@@ -21,8 +21,8 @@ function LoginForm(props) {
       password: Yup.string()
         .required("Required!"),
     }),
-    onSubmit: values => {
-      dispatch(login(values));
+    onSubmit: async (values) => {
+      await dispatch(login(values));
       window.location.href="/"
     },
   });

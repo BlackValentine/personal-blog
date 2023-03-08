@@ -13,15 +13,21 @@ export const userSlice = createSlice({
     [login.fulfilled]: (state, action) => {
       if (action.payload) {
         if (action.payload.accessToken) {
-          let { accessToken, refreshToken } = action.payload
+          let { accessToken, refreshToken, userName, email } = action.payload
           localStorage.setItem('accessTokenLava', accessToken)
           localStorage.setItem('refreshTokenLava', refreshToken)
+          localStorage.setItem('user', JSON.stringify({
+            userName: userName,
+            email: email
+          }))
           axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`
         }
       }
     },
     [logout.fulfilled]: (state, action) => {
-      console.log(action.payload)
+      localStorage.removeItem('accessTokenLava')
+      localStorage.removeItem('refreshTokenLava')
+      localStorage.removeItem('user')
     }
   }
 })
