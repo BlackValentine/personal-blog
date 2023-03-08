@@ -2,6 +2,11 @@ import { createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
 import { login, logout } from '../api/userApi'
 
+const accessToken = localStorage.getItem('accessTokenLava')
+if (accessToken) {
+  axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`
+}
+
 const initialState = {
 }
 

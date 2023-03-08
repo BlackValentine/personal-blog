@@ -11,7 +11,7 @@ function Footer(props) {
             <input 
               className='w-full h-full pl-4 rounded-tl-full rounded-bl-full dark:bg-very-dark-gray dark:text-white dark:hover:bg-black transition-mode border border-solid border-spanish-gray' 
               type="text" 
-              placeholder='Your email address' 
+              placeholder='Your email address ...' 
             />
             <button className='flex bg-pastel-red text-white font-bold text-base h-full px-5 rounded-tr-full rounded-br-full'>
               <span className='m-auto'>Subscribe</span>

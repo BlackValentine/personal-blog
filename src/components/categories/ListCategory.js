@@ -24,7 +24,7 @@ function ListCategory(props) {
       count: 20
     },
     {
-      type: 'Art & Design',
+      type: 'Art and Design',
       count: 10
     }
   ]

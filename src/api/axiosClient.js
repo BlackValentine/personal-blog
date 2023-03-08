@@ -1,8 +1,11 @@
 import axios from 'axios';
 
+const accessToken = localStorage.getItem('accessTokenLava')
+
 const instance = axios.create({
     baseURL: process.env.BACKEND_URL,
-    withCredentials: true
+    withCredentials: true,
+    headers: {'Authorization': `Bearer ${accessToken}`}
 });
 
 export const isSuccessStatusCode = (s) => {

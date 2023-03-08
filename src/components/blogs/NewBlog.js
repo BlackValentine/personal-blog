@@ -104,7 +104,7 @@ function NewBlog(props) {
           <option value="Technology">Technology</option>
           <option value="Travel">Travel</option>
           <option value="Works">Works</option>
-          <option value="Art & Design">Art & Design</option>
+          <option value="Art&Design">Art&Design</option>
         </select>
       </div>
 

@@ -14,7 +14,7 @@ function HeaderCategory(props) {
       </div>
       <div className="flex items-center text-3xl font-extrabold mb-3">
         <span className="text-black dark:text-white transiton-mode">Category :</span>
-        <span className="text-pastel-red ml-2 capitalize">{currentPage ? currentPage : "all"}</span>
+        <span className="text-pastel-red ml-2">{currentPage ? currentPage : "All"}</span>
       </div>
       <p className="text-spanish-gray max-w-screen-md dark:text-very-light-gray transiton-mode">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quae explicabo, ducimus necessitatibus eum aut enim modi saepe perspiciatis fugit</p>
     </div>

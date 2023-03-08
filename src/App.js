@@ -18,10 +18,16 @@ import './App.scss';
 import "swiper/css";
 import "swiper/css/navigation";
 import { setLightMode } from './features/generalSlice';
+import axios from 'axios';
 
 function App() {
   const dispatch = useDispatch();
   const lightMode = useSelector(state => state.general.lightMode)
+
+  let accessToken = localStorage.getItem('accessTokenLava');
+  if (accessToken) {
+    axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`
+  }
 
   useEffect(() => {
     if (window.matchMedia('(prefer-color-scheme: dark').matches) {
@@ -47,7 +53,7 @@ function App() {
     <div className="App">
       <Header />
       <Loading />
-      <div style={{paddingTop: '75px'}}>
+      <div style={{ paddingTop: '75px' }}>
         <Routes>
           <Route path="/" element={<HomeScreen />} />
           <Route path="/login" element={<LoginScreen />} />
