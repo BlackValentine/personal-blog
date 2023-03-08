@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import MarkdownIt from 'markdown-it';
 import MdEditor from 'react-markdown-editor-lite';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import utils from '../../utils';
 import 'react-markdown-editor-lite/lib/index.css';
 import blogApi from '../../api/blogApi';
@@ -10,7 +10,6 @@ const mdParser = new MarkdownIt();
 
 function NewBlog(props) {
   const { state } = useLocation();
-  const navigate = useNavigate();
 
   const id = state?.id;
 
@@ -25,16 +24,6 @@ function NewBlog(props) {
   const handleEditorChange = ({ html, text }) => {
     setContentBlog(html)
     setRawContentBlog(text)
-  }
-
-  const onImageUpload = (file) => {
-    return new Promise(resolve => {
-      const reader = new FileReader();
-      reader.onload = data => {
-        resolve(data.target.result);
-      };
-      reader.readAsDataURL(file);
-    });
   }
 
   const handleInputTitleBlog = (e) => {
@@ -138,7 +127,6 @@ function NewBlog(props) {
         className="h-96"
         renderHTML={text => mdParser.render(text)}
         onChange={handleEditorChange}
-        onImageUpload={onImageUpload}
         value={rawContentBlog}
         placeholder="Write something for your blog here ..."
       />
