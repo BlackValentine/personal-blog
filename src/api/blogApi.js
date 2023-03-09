@@ -56,7 +56,7 @@ export default blogApi;
 export const getAllBlogs = createAsyncThunk(
   "api/blog/all",
   (payload, thunkAPI) => {
-      const url = `/blog/all`
+      const url = `/api/blog/all`
       return sendRequest(url, payload, thunkAPI, 'get')
   }
 )
@@ -64,7 +64,7 @@ export const getAllBlogs = createAsyncThunk(
 export const getBlogsPagination = createAsyncThunk(
   "api/blog/all",
   (payload, thunkAPI) => {
-      const url = `/blog/all`
+      const url = `/api/blog/all`
       return sendRequest(url, payload, thunkAPI, 'get')
   }
 )
