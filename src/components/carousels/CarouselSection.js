@@ -5,14 +5,11 @@ import bg3 from '../../assets/images/bg3.jpg';
 import CarouselItem from './CarouselItem';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay } from 'swiper';
+import { useSelector } from 'react-redux';
 
 function CarouselSection(props) {
   SwiperCore.use([Autoplay]);
-  const carouselList = [
-    { id: 1, image: bg1, type: "Livestype" },
-    { id: 2, image: bg2, type: "Technology" },
-    { id: 3, image: bg3, type: "Food" },
-  ]
+  const allBlogs = useSelector(state => state.blog.blogs)
 
   return (
     <Swiper
@@ -23,12 +20,16 @@ function CarouselSection(props) {
         disableOnInteraction: false
       }}
     >
-      {carouselList.map(carouselItem => {
+      {allBlogs.map(carouselItem => {
         return (
           <SwiperSlide key={carouselItem.id}>
-            <CarouselItem 
+            <CarouselItem
+              id={carouselItem.id}
               image={carouselItem.image}
               type={carouselItem.type}
+              title={carouselItem.title}
+              subTitle={carouselItem.subTitle}
+              createdAt={carouselItem.created_at}
             />
           </SwiperSlide>
         )

@@ -11,7 +11,9 @@ function Footer(props) {
   }
 
   const handleSubmit = async () => {
-    await dispatch(addNewSubscriber({ email: subscriberInput }));
+    if (subscriberInput.length > 0 && subscriberInput.includes('@')) {
+      await dispatch(addNewSubscriber({ email: subscriberInput }));
+    }
     setSubscriberInput('')
   }
 
@@ -66,7 +68,7 @@ function Footer(props) {
           </ul>
         </div>
         <div className="flex py-7 border-t border-solid border-white/10">
-          <span className='text-white mx-auto'>© Copyright 2023 BlackValentine, All Rights Reserved.</span>
+          <span className='text-white mx-auto tracking-widest'>© Copyright 2023 <span className="text-white hover:text-pastel-red duration-500">BlackValentine</span>, All Rights Reserved.</span>
         </div>
       </div>
     </div>
