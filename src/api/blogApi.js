@@ -3,7 +3,7 @@ import { sendRequest } from '../utils/utils';
 import axiosClient from './axiosClient'
 
 const createBlog = (dataBlog) => {
-  const url = '/blog/create';
+  const url = '/api/blog/create';
   return axiosClient.post(url, {
     title: dataBlog.titleBlog,
     subTitle: dataBlog.subtitleBlog,
@@ -20,12 +20,12 @@ const createBlog = (dataBlog) => {
 // }
 
 const getBlogPagination = (pageNumber) => {
-  const url = `/blog?page=${pageNumber}&limit=1`
+  const url = `/api/blog?page=${pageNumber}&limit=1`
   return axiosClient.get(url)
 }
 
 const editBlog = (dataBlog) => {
-  const url = '/blog/edit';
+  const url = '/api/blog/edit';
   return axiosClient.put(url, {
     id: dataBlog.id,
     title: dataBlog.titleBlog,
@@ -38,7 +38,7 @@ const editBlog = (dataBlog) => {
 }
 
 const deleteBlog = (id) => {
-  const url = '/blog/delete';
+  const url = '/api/blog/delete';
   return axiosClient.delete(url, {
     id: id
   })
