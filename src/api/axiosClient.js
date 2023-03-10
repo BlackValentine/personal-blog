@@ -3,7 +3,7 @@ import axios from 'axios';
 const accessToken = localStorage.getItem('accessTokenLava')
 
 const instance = axios.create({
-    baseURL: `${process.env.BACKEND_URL}`,
+    baseURL: `${process.env.BACKEND_URL}/api`,
     withCredentials: true,
     headers: {'Authorization': `Bearer ${accessToken}`}
 });
