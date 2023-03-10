@@ -3,7 +3,7 @@ import { sendRequest } from '../utils/utils';
 import axiosClient from './axiosClient'
 
 const createBlog = (dataBlog) => {
-  const url = '/api/blog/create';
+  const url = '/blog/create';
   return axiosClient.post(url, {
     title: dataBlog.titleBlog,
     subTitle: dataBlog.subtitleBlog,
@@ -20,12 +20,12 @@ const createBlog = (dataBlog) => {
 // }
 
 const getBlogPagination = (pageNumber) => {
-  const url = `/api/blog?page=${pageNumber}&limit=1`
+  const url = `/blog?page=${pageNumber}&limit=1`
   return axiosClient.get(url)
 }
 
 const editBlog = (dataBlog) => {
-  const url = '/api/blog/edit';
+  const url = '/blog/edit';
   return axiosClient.put(url, {
     id: dataBlog.id,
     title: dataBlog.titleBlog,
@@ -38,7 +38,7 @@ const editBlog = (dataBlog) => {
 }
 
 const deleteBlog = (id) => {
-  const url = '/api/blog/delete';
+  const url = '/blog/delete';
   return axiosClient.delete(url, {
     id: id
   })
@@ -56,7 +56,7 @@ export default blogApi;
 export const getAllBlogs = createAsyncThunk(
   "api/blog/all",
   (payload, thunkAPI) => {
-      const url = `/api/blog/all`
+      const url = `/blog/all`
       return sendRequest(url, payload, thunkAPI, 'get')
   }
 )
@@ -64,7 +64,7 @@ export const getAllBlogs = createAsyncThunk(
 export const getBlogsPagination = createAsyncThunk(
   "api/blog/all",
   (payload, thunkAPI) => {
-      const url = `/api/blog/all`
+      const url = `/blog/all`
       return sendRequest(url, payload, thunkAPI, 'get')
   }
 )
